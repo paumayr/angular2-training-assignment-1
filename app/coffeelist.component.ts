@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import { Junkie } from "./junkie";
+
 @Component({
     moduleId: module.id,
     selector: "coffee-list",
@@ -7,21 +9,9 @@ import { Component } from "@angular/core";
 })
 export class CoffeeListComponent {
 
-    junkies = [{
-        name: "Philipp",
-        consumptions: 50,
-        balance: 4.50
-    }, {
-        name: "Mathias",
-        consumptions: 70,
-        balance: 7.85
-    }];
+    junkies : Array<Junkie> = [];
 
     add(name: string) {
-        this.junkies.push({
-            name: name,
-            consumptions: 0,
-            balance: 0.00
-        });
+        this.junkies.push(new Junkie(name));
     }
 }

@@ -14,6 +14,7 @@
                 <td>{{junkie.name}}</td>
                 <td>{{junkie.consumptions}}</td>
                 <td>{{junkie.balance | currency: 'eur': true}}</td>
+                <td><button (click)="junkie.consume(1, 0.15)">+1</button></td>
             </tr>
         </tbody>
     </table>

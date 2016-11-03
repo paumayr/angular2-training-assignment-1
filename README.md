@@ -30,5 +30,12 @@ Step 3
 Create coffeelist component
     - table (name, consumptions, balance)
     - add users
-    
+
+Step 4
+====== 
+Refactor junkie into class
+    - constructor for default values
+    - method for adding consumptions
+
+Add button to user for consuming a coffee
      
