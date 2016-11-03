@@ -10,8 +10,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let junkie of junkies">
-                <td>{{junkie.name}}</td>
+            <tr *ngFor="let junkie of junkies; let i = index;">
+                <td><a [routerLink]="[i]">{{junkie.name}}</a></td>
                 <td>{{junkie.consumptions}}</td>
                 <td>{{junkie.balance | currency: 'eur': true}}</td>
                 <td><button (click)="junkie.consume(1, 0.15)">+1</button></td>

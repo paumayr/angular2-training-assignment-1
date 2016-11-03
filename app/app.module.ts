@@ -1,14 +1,25 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule }      from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
 
-import { AppComponent } from './app.component';
-import { CoffeeListComponent } from './coffeelist.component';
+import { AppComponent } from "./app.component";
+import { CoffeeListComponent } from "./coffeelist.component";
+import { JunkieComponent } from "./junkie.component";
+import { CoffeeListService} from "./coffeelist.service";
+import { appRoutes } from "./routes";
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ 
+      BrowserModule,
+      RouterModule.forRoot(appRoutes, { useHash: true })
+  ],
   declarations: [ 
       AppComponent,
-      CoffeeListComponent 
+      CoffeeListComponent,
+      JunkieComponent
+  ],
+  providers: [
+      CoffeeListService
   ],
   bootstrap:    [ AppComponent ] 
 })

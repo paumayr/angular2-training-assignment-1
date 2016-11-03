@@ -1,0 +1,13 @@
+<div>
+    <h1>{{junkie.name}}</h1>
+
+    <div>
+        <a [routerLink]="['..']">Back</a>
+    </div>
+
+    <label for="consumptionsField">Total Consumptions</label>
+    <div id="consumptionsField">{{junkie.consumptions}}</div>
+
+    <label for="balanceField">Balance</label>
+    <div id="balanceField">{{junkie.balance | currency : 'eur': true }}</div>
+</div>

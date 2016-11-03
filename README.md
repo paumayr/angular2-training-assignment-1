@@ -38,4 +38,13 @@ Refactor junkie into class
     - method for adding consumptions
 
 Add button to user for consuming a coffee
-     
+
+Step 5
+======
+
+Introduce Routing
+    - routes.ts
+    - junkie.component.ts
+    - junkie.component.html
+    - setup router-outlet
+    - routerLink, hash navigation url
