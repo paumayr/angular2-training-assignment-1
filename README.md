@@ -24,5 +24,11 @@ Create basic application
     - main.ts
 - index.html
 
+Step 3
+======
 
+Create coffeelist component
+    - table (name, consumptions, balance)
+    - add users
     
+     

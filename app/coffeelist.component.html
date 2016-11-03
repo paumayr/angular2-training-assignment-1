@@ -1,0 +1,23 @@
+<div>
+    <h1>The coffee list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Consumptions</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let junkie of junkies">
+                <td>{{junkie.name}}</td>
+                <td>{{junkie.consumptions}}</td>
+                <td>{{junkie.balance | currency: 'eur': true}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="text" #newNameInput />
+    <button (click)="add(newNameInput.value); newNameInput.value = ''">Add</button>
+</div>
