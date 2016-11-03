@@ -12,3 +12,17 @@ Create initial angular2 application
 
 -> install packages with npm install
 
+
+Step 2
+======
+
+Create basic application
+- app folder
+    - app.module.ts
+    - app.component.ts
+    - app.component.html
+    - main.ts
+- index.html
+
+
+    
