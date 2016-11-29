@@ -1,6 +1,7 @@
 import { NgModule }      from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from "./app.component";
 import { CoffeeListComponent } from "./coffeelist.component";
@@ -11,6 +12,7 @@ import { appRoutes } from "./routes";
 @NgModule({
   imports:      [ 
       BrowserModule,
+      HttpModule,
       RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   declarations: [ 

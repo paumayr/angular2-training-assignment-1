@@ -14,7 +14,7 @@
                 <td><a [routerLink]="[i]">{{junkie.name}}</a></td>
                 <td>{{junkie.consumptions}}</td>
                 <td>{{junkie.balance | currency: 'eur': true}}</td>
-                <td><button (click)="junkie.consume(1, 0.15)">+1</button></td>
+                <td><button (click)="consume(junkie, 1, 0.15)">+1</button></td>
             </tr>
         </tbody>
     </table>

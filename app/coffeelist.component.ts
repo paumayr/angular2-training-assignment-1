@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Subscription } from "rxjs";
+import { Subscription } from "rxjs/Subscription";
 
 import { Junkie } from "./junkie";
 import { CoffeeListService } from "./coffeelist.service";
@@ -20,7 +20,16 @@ export class CoffeeListComponent {
 
     junkies : Array<Junkie> = [];
 
+    consume(junkie : Junkie, units : number, unitPrice : number) {
+        this.coffeeListService.consume(junkie, units, unitPrice);
+    }
+
     add(name: string) {
-        this.coffeeListService.add(new Junkie(name));
+        this.coffeeListService.add({
+            id: null,
+            name: name,
+            balance: 0.0,
+            consumptions: 0
+        });
     }
 }
